@@ -12589,7 +12589,7 @@ client.on("guildMemberAdd", member => {
 }).catch(console.error)
 })
 
-client.on('message' , 9LnG => { //Coded By Server 9LnG
+client.on('message' , DâRK => { //Coded By Narox & DâRKNîghT#1001
   var Narox ="-" //prefix bot
     if(DâRK.content.startsWith('<@533458616112513024>')) //id bot
      var Dark = new Discord.RichEmbed()
@@ -12603,6 +12603,5 @@ client.on('message' , 9LnG => { //Coded By Server 9LnG
   .setTimestamp()
     DâRK.channel.send(Dark)
 });
-
 
 client.login(process.env.BOT_TOKEN);
