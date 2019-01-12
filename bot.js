@@ -14,13 +14,43 @@ client.on("message", message => {
       .setColor("#ffff00")
       .setThumbnail(message.author.avatarURL)
       .setDescription(`
+***
+ملاحظه
+Special orders ان برفكس الاوامر المميزه او
 
+يختلف عن جميع الاوامر 
+Special orders برفكس الاوامر المميزه او 
+f!!
+اما برفكس باقي الاوامر
+f!
+***
+`)
+
+
+message.author.sendEmbed(embed)
+
+}
+}); 
+ 
+ 
+ 
 client.on("message", message => {
  if (message.content === "f!help") {
   const embed = new Discord.RichEmbed() 
       .setColor("#ffff00")
       .setThumbnail(message.author.avatarURL)
       .setDescription(`
+
+***__وصف عن البوت__***
+**
+9LnG Bot 
+
+سرعه اتصال ممتازه
+سهل الاستخدام
+صيانه كل يوم
+بوت عربي وسيتم اضافه اللغه الاجنبيه قريبا
+يحتوي على خاصيه الميوزك بجوده عاليه
+**
 
         ***__General orders__***
 **
@@ -58,9 +88,6 @@ client.on("message", message => {
 『f!unmutechannel /فتح الشات』
 『f!add.r / اضافه رتبه』
 『f!delet / مسح روم』
-『f!color 50 /انشاء 50 لون』
-『f!color 100/انشاء 100 لون』
-『f!color 140/انشاء 140 لوم』
 『f!ct /انشاء روم كتابي』4
 『f!cv /انشاء روم صوتي』
 『f!bc /برودكاست』
