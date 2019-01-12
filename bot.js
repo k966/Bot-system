@@ -1313,7 +1313,7 @@ client.on('message' , DâRK => { //Coded By Narox & DâRKNîghT#1001
 
 const devs = ["360529010842664971"]// ايدي الخاص بحسابك
  
-const adminprefix = "البريفكس هنا";//Narox
+const adminprefix = "f!";//Narox
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!devs.includes(message.author.id)) return;
