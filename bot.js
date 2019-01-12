@@ -15,7 +15,15 @@ client.on("message", message => {
       .setThumbnail(message.author.avatarURL)
       .setDescription(`
 ***
+ملاحظه
+Special orders ان برفكس الاوامر المميزه او
 
+يختلف عن جميع الاوامر 
+Special orders برفكس الاوامر المميزه او 
+f!!
+اما برفكس باقي الاوامر
+f!
+***
 `)
 
 
@@ -32,6 +40,9 @@ client.on("message", message => {
       .setColor("#ffff00")
       .setThumbnail(message.author.avatarURL)
       .setDescription(`
+
+***__. . .__***
+**
 
         ***__General orders__***
 **
