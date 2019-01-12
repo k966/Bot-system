@@ -43,7 +43,7 @@ client.on("message", message => {
 
 ***__وصف عن البوت__***
 **
-9LnG Bot 
+9LnG System
 
 سرعه اتصال ممتازه
 سهل الاستخدام
