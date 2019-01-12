@@ -15,15 +15,7 @@ client.on("message", message => {
       .setThumbnail(message.author.avatarURL)
       .setDescription(`
 ***
-ملاحظه
-Special orders ان برفكس الاوامر المميزه او
 
-يختلف عن جميع الاوامر 
-Special orders برفكس الاوامر المميزه او 
-f!!
-اما برفكس باقي الاوامر
-f!
-***
 `)
 
 
@@ -40,21 +32,6 @@ client.on("message", message => {
       .setColor("#ffff00")
       .setThumbnail(message.author.avatarURL)
       .setDescription(`
-
-***__وصف عن البوت__***
-**
-Fire bot 
-متعدد الميزات و الاوامر فيه اوامر جميله يحتوي هذا البوت على
-خاصيه قائمه الالوان و تقدر تغير لونك زي برو بوت و مانع الاسبام و الترحيب 
-بصوره
-
-سرعه اتصال ممتازه
-سهل الاستخدام
-صيانه كل يوم
-مجاني بل كامل 
-بوت عربي وسيتم اضافه اللغه الاجنبيه قريبا
-يحتوي على خاصيه الميوزك بجوده عاليه
-**
 
         ***__General orders__***
 **
