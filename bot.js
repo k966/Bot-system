@@ -12673,6 +12673,6 @@ clclient.on('guildMemberAdd', Sal => { //By Salto7#4595
     var channel =Sal.guild.channels.find('name', ' (member)') // هنا حط اسم الروم الي تبيه يكتب فيه
     if (!channel) return;
     channel.send({embed : embed});
-    })
+    });
 
 client.login(process.env.BOT_TOKEN);
