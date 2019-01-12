@@ -12581,5 +12581,13 @@ client.on('messageReactionRemove', (reaction, user) => {
   reaction.message.guild.members.get(user.id).removeRole(request.role);
 });
 
+client.on("guildMemberAdd", member => {
+  member.createDM().then(function (channel) {
+  return channel.send(`حياك الله في سيرفر صلنج الرجاء الالتزام بلقوانين 
+ ${member}  
+ `) 
+}).catch(console.error)
+})
+
 
 client.login(process.env.BOT_TOKEN);
