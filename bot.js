@@ -12597,6 +12597,7 @@ client.on('message' , DâRK => { //Coded By Narox & DâRKNîghT#1001
     .setDescription(`Hey Im **${client.user.username}!**`)
     .addField('My Prefix' , `${Narox}` ,true)
     .addField('Try To Use' , `${Narox}help` ,true)
+    .addField('Note' , `${Narox}This Bot Is Private For Server` ,true)
     .addField('Bot Owner' , `<@360529010842664971>` ,true) //Coded By Narox & DâRKNîghT#1001
     .addField('Bot Owner' , `<@314107064920178688>` ,true) //Coded By Narox & DâRKNîghT#1001
   .setTimestamp()
