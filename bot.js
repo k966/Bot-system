@@ -12656,7 +12656,8 @@ client.on('message', message => {
  
   });
 
-client.on('guildMemberAdd', Sal => { //By Salto7#4595
+
+clclient.on('guildMemberAdd', Sal => { //By Salto7#4595
     var embed = new Discord.RichEmbed()
     .setAuthor(Sal.user.username, Sal.user.avatarURL)
     .setThumbnail(Sal.user.avatarURL)
@@ -12669,9 +12670,9 @@ client.on('guildMemberAdd', Sal => { //By Salto7#4595
     .addField(' 👤  انت رقم',`**[ ${Sal.guild.memberCount} ]**`,true)
     .setColor('RANDOM')
     .setFooter(Sal.guild.name, Sal.guild.iconURL, true)
-    var channel =Sal.guild.channels.find('name', ' (ᏔᎬᏞᏨᏫᎷᎬ)') // member
+    var channel =Sal.guild.channels.find('name', ' (member)') // هنا حط اسم الروم الي تبيه يكتب فيه
     if (!channel) return;
     channel.send({embed : embed});
-    });
+    })
 
 client.login(process.env.BOT_TOKEN);
