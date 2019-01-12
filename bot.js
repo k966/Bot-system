@@ -12589,5 +12589,20 @@ client.on("guildMemberAdd", member => {
 }).catch(console.error)
 })
 
+client.on('message' , 9LnG => { //Coded By Server 9LnG
+  var Narox ="-" //prefix bot
+    if(DâRK.content.startsWith('<@533458616112513024>')) //id bot
+     var Dark = new Discord.RichEmbed()
+    .setColor('RANDOM')
+    .setDescription(`Hey Im **${client.user.username}!**`)
+    .addField('My Prefix' , `${Narox}` ,true)
+    .addField('Try To Use' , `${Narox}help` ,true)
+    .addField('Add Bot' , `${Narox}invitebot` ,true)
+    .addField('Support Server' , `${Narox}support` ,true)
+    .addField('Bot Owner' , `<@360529010842664971>` ,true) //Coded By Narox & DâRKNîghT#1001
+  .setTimestamp()
+    DâRK.channel.send(Dark)
+});
+
 
 client.login(process.env.BOT_TOKEN);
