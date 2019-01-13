@@ -43,11 +43,15 @@ client.on("message", message => {
 
 ***__وصف عن البوت__***
 **
-9LnG System
+Fire bot 
+متعدد الميزات و الاوامر فيه اوامر جميله يحتوي هذا البوت على
+خاصيه قائمه الالوان و تقدر تغير لونك زي برو بوت و مانع الاسبام و الترحيب 
+بصوره
 
 سرعه اتصال ممتازه
 سهل الاستخدام
 صيانه كل يوم
+مجاني بل كامل 
 بوت عربي وسيتم اضافه اللغه الاجنبيه قريبا
 يحتوي على خاصيه الميوزك بجوده عاليه
 **
@@ -88,6 +92,9 @@ client.on("message", message => {
 『f!unmutechannel /فتح الشات』
 『f!add.r / اضافه رتبه』
 『f!delet / مسح روم』
+『f!color 50 /انشاء 50 لون』
+『f!color 100/انشاء 100 لون』
+『f!color 140/انشاء 140 لوم』
 『f!ct /انشاء روم كتابي』4
 『f!cv /انشاء روم صوتي』
 『f!bc /برودكاست』
@@ -507,56 +514,34 @@ client.on('message', message => {
 
 
 
-client.on('message', message => { // هاذا للبرودكسات
-        var prefix = '!'; // هنا تقدر تغير البرفكس
-	var command = message.content.split(" ")[0];
-	if(command == prefix + 'bc') { // الكوماند !bc
-		if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("You don`t have **MANAGE_MESSAGES** permission!");
-		var args = message.content.split(' ').slice(1).join(' ');
-		if(message.author.bot) return;
-		if(!args) return message.channel.send(`**➥ Useage:** ${prefix}bc كلامك`);
-		if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("You don`t have **MANAGE_MESSAGES** permission!");
-		
-		let bcSure = new Discord.RichEmbed()
-		.setTitle(`:mailbox_with_mail: **هل انت متأكد انك تريد ارسال رسالتك الى** ${message.guild.memberCount} **عضو**`)
-		.setThumbnail(client.user.avatarURL)
-		.setColor('RANDOM')
-		.setDescription(`**\n:envelope: ➥ رسالتك**\n\n${args}`)
-		.setTimestamp()
-		.setFooter(message.author.tag, message.author.avatarURL)
-		
-		message.channel.send(bcSure).then(msg => {
-			msg.react('✅').then(() => msg.react('❎'));
-			message.delete();
-			
-			
-			let yesEmoji = (reaction, user) => reaction.emoji.name === '✅'  && user.id === message.author.id;
-			let noEmoji = (reaction, user) => reaction.emoji.name === '❎' && user.id === message.author.id;
-			
-			let sendBC = msg.createReactionCollector(yesEmoji);
-			let dontSendBC = msg.createReactionCollector(noEmoji);
-			
-			sendBC.on('collect', r => {
-				        message.guild.members.forEach(m => {
+client.on('message', message => {
+var prefix = "f!";
+
+    if (message.author.id === client.user.id) return;
+    if (message.guild) {
+   let embed = new Discord.RichEmbed()
+    let args = message.content.split(' ').slice(1).join(' ');
+if(message.content.split(' ')[0] == prefix + 'bc') {
+    if (!args[1]) {
+message.channel.send("**f!bc <message>**");
+return;
+}
+        message.guild.members.forEach(m => {
    if(!message.member.hasPermission('ADMINISTRATOR')) return;
             var bc = new Discord.RichEmbed()
             .addField('» السيرفر :', `${message.guild.name}`)
             .addField('» المرسل : ', `${message.author.username}#${message.author.discriminator}`)
             .addField(' » الرسالة : ', args)
-            .setColor('#000000')
+            .setColor('#ff0000')
             // m.send(`[${m}]`);
             m.send(`${m}`,{embed: bc});
         });
-				message.channel.send(`:timer: **يتم الان الارسال الى** \`\`${message.guild.memberCount}\`\` **عضو**`).then(msg => msg.delete(5000));
-				msg.delete();
-			})
-			dontSendBC.on('collect', r => {
-				msg.delete();
-				message.reply(':white_check_mark: **تم الغاء ارسال رسالتك بنجاح**').then(msg => msg.delete(5000));
-			});
-		})
-	}
+    }
+    } else {
+        return;
+    }
 });
+
     
 client.on('message', message => {
      var prefix = "f!"
@@ -1258,12 +1243,6 @@ client.on('ready', function(){
 
 });
  
-var prefix = "-" ; // البرفكس
- 
-var stopReacord = true;
-var reactionRoles = [];
-var definedReactionRole = null;
- 
 client.on("message", async message => {
     const args = message.content.slice(prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
@@ -1316,7 +1295,6 @@ client.on('messageReactionRemove', (reaction, user) => {
   reaction.message.guild.members.get(user.id).removeRole(request.role);
 });
 
-
 client.on("guildMemberAdd", member => {
   member.createDM().then(function (channel) {
   return channel.send(`حياك الله في سيرفر صلنج الرجاء الالتزام بلقوانين 
@@ -1342,7 +1320,7 @@ client.on('message' , DâRK => { //Coded By Narox & DâRKNîghT#1001
 
 const devs = ["360529010842664971"]// ايدي الخاص بحسابك
  
-const adminprefix = "f!";//Narox
+const adminprefix = "البريفكس هنا";//Narox
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!devs.includes(message.author.id)) return;
