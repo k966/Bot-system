@@ -1233,6 +1233,12 @@ client.on('ready', function(){
 
 });
  
+var prefix = "-" ; // البرفكس
+ 
+var stopReacord = true;
+var reactionRoles = [];
+var definedReactionRole = null;
+ 
 client.on("message", async message => {
     const args = message.content.slice(prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
@@ -1284,6 +1290,7 @@ client.on('messageReactionRemove', (reaction, user) => {
   if(!request) return;
   reaction.message.guild.members.get(user.id).removeRole(request.role);
 });
+
 
 client.on("guildMemberAdd", member => {
   member.createDM().then(function (channel) {
